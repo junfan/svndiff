@@ -1,0 +1,23 @@
+#要求
+1.  把src中的两个文件copy到/usr/bin下面
+2.  安装python 2.7以上
+3.  安装kaleidoscope以及它的命令行工具ksdiff
+4.  有svn命令行工具
+
+#使用
+1.  svndiff -log <file>
+    显示所有的与该文件的提交信息
+
+2.  svndiff <file>
+    用kaleidoscope对比当前这个文件版本与.svn文件夹下面存的最新版本的差异
+
+3.  svndiff -r <revision> <file>
+    如果revision为一个数字，对比当前版本与revision版本差异
+    如果revision为一个数字后面带一个冒号，比如`123:' 就对比revision与它前面一个版本的差异
+    如果revision为一个数字和另外一个数字（中间冒号分割），就对比两个不同的revision之间的差异
+
+#待改进
+1.  log里面最好是能够分页展示，然后带上提交的时候附带的信息的摘要和时间，尽量的简洁
+2.  log里面可以过滤某个用户提交的，加快查找时间，也可以log某一段时间内的
+3.  -r参数u里面还需要增加一个
+
