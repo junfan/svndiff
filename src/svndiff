@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#d=`dirname $1`
+#f=`basename $1`
+#ksdiff "$d/.svn/text-base/$f.svn-base" "$1"
+python /usr/bin/svndiff.py $*
